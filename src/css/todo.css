@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: lighter;
+    padding: 0.8em;
+    width: 100%;
+}
+.container{
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.container h1{
+    padding: 1.2rem;
+}
+
+.container h2{
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-btn{
+    margin-top: 1em;
+    padding: 0.8em;
+    font-weight: lighter;
+    color: #008080;
+    background-color: #084874;
+}
