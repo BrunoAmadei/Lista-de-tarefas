@@ -1,46 +1,179 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #eee;
+    color: #483d8b;
+    font-family: Helvetica, sans-serif;
 }
 
-input{
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: lighter;
-    padding: 0.8em;
-    width: 100%;
+:root {
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
 }
-.container{
+
+.container {
     margin-top: 2em;
     padding: 2em;
+    width: 90%;
 }
 
-.container h1{
+.container h1 {
     padding: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.container h2{
-    margin-bottom: 0.5rem;
-    font-weight: 100;
-}
-
-.form{
+.form {
     display: flex;
     flex-direction: column;
 }
 
-.add-btn{
+.entrada {
+    width: 100%;
+    padding: 0.8rem;
+    appearance: none;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    background: #fff;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.form h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.add-btn {
     margin-top: 1em;
-    padding: 0.8em;
-    font-weight: lighter;
-    color: #008080;
-    background-color: #084874;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--shadow);
+    background-color: #3d3796;
+    color: #eee;
+    transition: ease-in-out 0.3s;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    opacity: 0.88;
+}
+
+/* Itens da lista */
+
+.lista-tarefas{
+    margin-top: 2rem;
+}
+
+.lista-tarefas h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+.item input:not([type="radio"]):not([type="checkbox"]),
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+.bolha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #40ee3a;
+    box-shadow: 0px 0px 4px rgba(58, 238, 103, 0.75);
+}
+
+.bolha::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: #24e434;
+    box-shadow: 0px 0px 4px rgba(58, 238, 103, 0.75);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+input:checked~.bolha::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 1.2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.8rem;
+    width: 100%;
+}
+
+.item label {
+    display: block;
+    margin-right: 1rem;
+}
+
+.item label:hover {
+    cursor: pointer;
+    transition: all 0.2;
+}
+
+.item .conteudo {
+    flex: 1 1 0%;
+}
+
+.item .conteudo input {
+    font-size: 1.2rem;
+    color: #483d8b;
+}
+
+.item .acoes button {
+    padding: 0.5rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: #eee;
+}
+
+.item .acoes .editar {
+    margin-right: 0.5rem;
+    background-color: #4941b3;
+}
+
+.item .acoes .deletar {
+    background-color: #ff5b57;
+}
+
+.item .acoes button:hover{
+    opacity: 0.75;
+}
+
+.item.concluido .conteudo input{
+    text-decoration: line-through;
+    color: #888;
 }

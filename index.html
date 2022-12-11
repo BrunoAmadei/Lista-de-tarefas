@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +12,62 @@
     <!-- JS -->
     <script src="src/js/app.js"></script>
 </head>
+
 <body>
     <main class="container">
         <h1>Lista de Tarefas</h1>
-        <h2>Organize suas tarefas:</h2>
-        
-        <div class="form">
-            <label for="tarefa">
-                <input 
-                  type="text" 
-                  id="" 
-                  placeholder="Digite aqui sua tarefa"
-                />
-            </label>
-         
+
+        <form class="form">
+            <h2>Organize suas tarefas:</h2>
+
+            <input type="text" id="tarefa" name="conteudo" placeholder="Digite aqui sua tarefa" class="entrada" required />
+
             <button class="add-btn">Adicionar</button>
-        </div>
-    </main>   
+        </form>
+
+
+        <!-- Tarefas -->
+        <section class="lista-tarefas">
+            <h3>Tarefas</h3>
+            <div class="lista" id="lista-tarefas">
+                <!-- <div class="item">
+                    <label> 
+                        <input type="checkbox"/>
+                        <span class="bolha"></span>
+                    </label>
+
+                    <div class="conteudo">
+                        <input type="text" value="Tarefa 1" readonly />
+                    </div>
+
+
+                    <div class="acoes">
+                        <button class="editar">Editar</button>
+                        <button class="deletar">Deletar</button>
+                    </div>
+                </div>
+
+                <div class="item concluido">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bolha"></span>
+                    </label>
+
+                    <div class="conteudo">
+                        <input type="text" value="Tarefa 2" readonly />
+                    </div>
+
+
+                    <div class="acoes">
+                        <button class="editar">Editar</button>
+                        <button class="deletar">Deletar</button>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
