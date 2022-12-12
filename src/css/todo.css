@@ -5,11 +5,16 @@
 }
 
 :root {
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     --primaria: #483d84;
+    --backgorund: #eee;
+    --branco: #fff;
+    --editar: #4941b3;
+    --deletar: #ff5b57;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --brilho: 0px 0px 4px rgba(58, 238, 103, 0.75)
 }
 
-html{
+html {
     font-size: 90%;
 }
 
@@ -17,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eee;
+    background-color: var(--backgorund);
     color: var(--primaria);
     font-family: Helvetica, sans-serif;
 }
@@ -46,7 +51,7 @@ body {
     border: none;
     border-radius: 0.5rem;
     outline: none;
-    background: #fff;
+    background: var(--branco);
     box-shadow: var(--shadow);
     text-align: center;
 }
@@ -63,7 +68,7 @@ body {
     border: none;
     box-shadow: var(--shadow);
     background-color: #3d3796;
-    color: #eee;
+    color: var(--backgorund);
     transition: ease-in-out 0.3s;
 }
 
@@ -74,7 +79,7 @@ body {
 
 /* Itens da lista */
 
-.lista-tarefas{
+.lista-tarefas {
     margin-top: 2rem;
 }
 
@@ -107,7 +112,7 @@ input[type="checkbox"] {
     height: 20px;
     border-radius: 50%;
     border: 2px solid #40ee3a;
-    box-shadow: 0px 0px 4px rgba(58, 238, 103, 0.75);
+    box-shadow: var(--brilho);
 }
 
 .bolha::after {
@@ -117,7 +122,7 @@ input[type="checkbox"] {
     width: 0px;
     height: 0px;
     background-color: #24e434;
-    box-shadow: 0px 0px 4px rgba(58, 238, 103, 0.75);
+    box-shadow: var(--brilho);
     border-radius: 50%;
     transition: 0.2s ease-in-out;
 }
@@ -156,7 +161,7 @@ input:checked~.bolha::after {
     font-size: 1.2rem;
     text-transform: capitalize;
     width: 100%;
-    color: #483d8b;
+    color: var(--primaria);
 }
 
 .item .acoes button {
@@ -164,23 +169,23 @@ input:checked~.bolha::after {
     border-radius: 0.35rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    color: #eee;
+    color: var(--backgorund);
 }
 
 .item .acoes .editar {
     margin-right: 0.5rem;
-    background-color: #4941b3;
+    background-color: var(--editar);
 }
 
 .item .acoes .deletar {
-    background-color: #ff5b57;
+    background-color: var(--deletar);
 }
 
-.item .acoes button:hover{
+.item .acoes button:hover {
     opacity: 0.75;
 }
 
-.item.concluido .conteudo input{
+.item.concluido .conteudo input {
     text-decoration: line-through;
     color: #888;
 }
