@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,7 @@ body {
     justify-content: center;
     background-color: var(--backgorund);
     color: var(--primaria);
-    font-family: Helvetica, sans-serif;
+    font-family: 'Poppins',Helvetica, sans-serif;
 }
 
 .container {
@@ -51,6 +52,7 @@ body {
     border: none;
     border-radius: 0.5rem;
     outline: none;
+    font-size: 1.2rem;
     background: var(--branco);
     box-shadow: var(--shadow);
     text-align: center;
@@ -58,7 +60,7 @@ body {
 
 .form h2 {
     margin-bottom: 0.5rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .add-btn {
@@ -191,7 +193,7 @@ input:checked~.bolha::after {
 }
 
 /* Media query */
-@media(max-width: 400px){
+@media(max-width: 600px){
     html{
         font-size: 75%;
     }
