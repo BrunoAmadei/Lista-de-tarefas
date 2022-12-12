@@ -4,17 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --primaria: #483d84;
+}
+
+html{
+    font-size: 90%;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #eee;
-    color: #483d8b;
+    color: var(--primaria);
     font-family: Helvetica, sans-serif;
-}
-
-:root {
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
 }
 
 .container {
@@ -149,6 +154,8 @@ input:checked~.bolha::after {
 
 .item .conteudo input {
     font-size: 1.2rem;
+    text-transform: capitalize;
+    width: 100%;
     color: #483d8b;
 }
 
