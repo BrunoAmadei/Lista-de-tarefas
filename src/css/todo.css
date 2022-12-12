@@ -30,7 +30,7 @@ body {
 .container {
     margin-top: 2em;
     padding: 2em;
-    width: 90%;
+    width: 80%;
 }
 
 .container h1 {
@@ -188,4 +188,19 @@ input:checked~.bolha::after {
 .item.concluido .conteudo input {
     text-decoration: line-through;
     color: #888;
+}
+
+/* Media query */
+@media(max-width: 400px){
+    html{
+        font-size: 75%;
+    }
+
+    .container{
+        width: 465px;
+    }
+
+    .item .conteudo input{
+        font-size: 1.180rem;
+    } 
 }
