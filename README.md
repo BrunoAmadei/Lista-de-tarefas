@@ -1,6 +1,5 @@
 # [Lista de tarefas](https://listadetarefas-ftmb.netlify.app/)
  Aplicação onde se pode adicionar, remover e marcar uma tarefas armazenadas no _LocalStorage_.
- ---
  
 ![image](https://user-images.githubusercontent.com/110541376/211203329-c0fa7636-384c-4d94-a611-ebbb387c3f5c.png)
 
